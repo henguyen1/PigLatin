@@ -43,7 +43,7 @@ public String pigLatin(String sWord)
 	}
 	else if(sWord.charAt(0) != 'a'|| sWord.charAt(0) != 'e'|| sWord.charAt(0) != 'i' || sWord.charAt(0) != 'o' || sWord.charAt(0) != 'u')
 	{
-		return sWord.substring(1,sWord.length()) + sWord.charAt(0) + "ay"; //fix this ... not just 1 constant all constonants until next vowel move to end
+		return sWord.substring(findFirstVowel(sWord),sWord.length()) + sWord.substring(0,findFirstVowel(sWord)) + "ay"; //fix this ... not just 1 constant all constonants until next vowel move to end
 	}
 	else
 	{
